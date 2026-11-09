@@ -215,5 +215,16 @@ $('#cert-form').addEventListener('submit', async (e) => {
   }
 });
 
+// Reto Parte 9: nueva función GET /api/hello?name=...
+$('#btn-hello').addEventListener('click', async () => {
+  const name = $('#hello-name').value;
+  try {
+    const r = await api(`hello?name=${encodeURIComponent(name)}`);
+    $('#hello-out').textContent = r.message;
+  } catch (err) {
+    $('#hello-out').textContent = `Error: ${err.message}`;
+  }
+});
+
 checkApi();
 loadQuiz();
