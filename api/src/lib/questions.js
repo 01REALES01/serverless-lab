@@ -153,7 +153,7 @@ const questions = [
       'Publicar contenido nuevo en esa Static Web App y nada más',
       'Crear máquinas virtuales a nombre del estudiante'
     ],
-    answer: 9,
+    answer: 2,
     explanation:
       'El token solo autoriza a publicar en esa aplicación: no tiene permisos RBAC sobre la suscripción. Aun así es un secreto, porque permite reemplazar el sitio; si se filtra, se restablece desde el portal.'
   }
