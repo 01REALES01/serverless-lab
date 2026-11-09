@@ -142,6 +142,20 @@ const questions = [
     answer: 1,
     explanation:
       'Static Web Apps crea un entorno de staging por Pull Request (el plan Free permite unos pocos simultáneos). Al cerrar el PR, el job "close" lo elimina.'
+  },
+  {
+    id: 'q11',
+    concept: 'Token de despliegue',
+    text: '¿Qué puede hacer el token de despliegue de una Static Web App si alguien lo roba?',
+    options: [
+      'Borrar todos los recursos de la suscripción de Azure',
+      'Leer los secretos de Microsoft Entra ID',
+      'Publicar contenido nuevo en esa Static Web App y nada más',
+      'Crear máquinas virtuales a nombre del estudiante'
+    ],
+    answer: 2,
+    explanation:
+      'El token solo autoriza a publicar en esa aplicación: no tiene permisos RBAC sobre la suscripción. Aun así es un secreto, porque permite reemplazar el sitio; si se filtra, se restablece desde el portal.'
   }
 ];
 
